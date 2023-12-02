@@ -1,0 +1,30 @@
+{
+  "name": "@toridoriv/logger",
+  "description": "A logger for my projects.",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/toridoriv/logger.git"
+  },
+  "type": "module",
+  "files": [
+    "./lib/*"
+  ],
+  "displayName": "Tori's Logger",
+  "homepage": "https://github.com/toridoriv/logger",
+  "author": {
+    "name": "Tori Rodriguez",
+    "email": "vrodriguezfe@icloud.com",
+    "url": "https://github.com/toridoriv"
+  },
+  "bugs": {
+    "url": "https://github.com/toridoriv/logger/issues"
+  },
+  "scripts": {
+    "precoverage": "npm run test:cov",
+    "coverage": "deno coverage --unstable --exclude='test\\.(js|mjs|ts|jsx|tsx)$|/test/' .coverage",
+    "test": "ENVIRONMENT=test deno test --allow-all --unstable --config=deno.json",
+    "pretest:cov": "rm -rf .coverage",
+    "test:cov": "npm test -- --coverage=.coverage"
+  }
+}

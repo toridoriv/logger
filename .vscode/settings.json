@@ -3,15 +3,17 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.rulers": [120]
+    "editor.rulers": [90, 120]
   },
   "deno.cacheOnSave": true,
   "deno.enable": true,
   "deno.unstable": false,
+  "deno.codeLens.references": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
     "source.organizeImports": true
   },
   "editor.formatOnSave": true,
-  "editor.rulers": [90]
+  "editor.rulers": [90],
+  "prettier.prettierPath": "./node_modules/prettier/index.cjs"
 }

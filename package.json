@@ -22,9 +22,13 @@
   },
   "scripts": {
     "precoverage": "npm run test:cov",
-    "coverage": "deno coverage --unstable --exclude='test\\.(js|mjs|ts|jsx|tsx)$|/test/' .coverage",
+    "coverage": "deno coverage --unstable --exclude='test\\.(js|mjs|ts|jsx|tsx)$|/test/' coverage",
     "test": "ENVIRONMENT=test deno test --allow-all --unstable --config=deno.json",
-    "pretest:cov": "rm -rf .coverage",
-    "test:cov": "npm test -- --coverage=.coverage"
+    "pretest:cov": "rm -rf coverage",
+    "test:cov": "npm test -- --coverage=coverage"
+  },
+  "devDependencies": {
+    "@homer0/prettier-plugin-jsdoc": "^8.0.0",
+    "prettier": "3.1.0"
   }
 }

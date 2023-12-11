@@ -8,7 +8,7 @@ export {};
 declare global {
   interface ErrorConstructor {
     /**
-     * Optional override for formatting stack traces
+     * Optional override for formatting stack traces.
      *
      * @see https://v8.dev/docs/stack-trace-api#customizing-stack-traces
      */
@@ -32,13 +32,11 @@ declare global {
     getFunction(): CallableFunction | undefined;
     /**
      * Returns the name of the current function, typically its name property.
-     * If a name property is not available an attempt is made to infer a name
-     * from the function’s context.
+     * If a name property is not available an attempt is made to infer a name from the function’s context.
      */
     getFunctionName(): string | null;
     /**
-     * Returns the name of the property of `this` or one of its prototypes
-     * that holds the current function.
+     * Returns the name of the property of `this` or one of its prototypes that holds the current function.
      */
     getMethodName(): string | null;
     /**
@@ -54,8 +52,7 @@ declare global {
      */
     getColumnNumber(): number | null;
     /**
-     * If this function was created using a call to `eval` returns a string
-     * representing the location where eval was called.
+     * If this function was created using a call to `eval` returns a string representing the location where eval was called.
      */
     getEvalOrigin(): string | undefined;
     /**
